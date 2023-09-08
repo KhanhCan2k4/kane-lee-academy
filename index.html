@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kane Lee Academy</title>
+    <link rel="stylesheet" href="./public/css/styles.css">
+</head>
+<body>
+    <div id="main-header">
+        <h1>Kane Lee Academy</h1>
+    </div>
+    <div id="root"></div>
+
+    <div id="btn-test" class="btn">Take a quiz</div>
+
+    <!-- <div id="main-footer">
+        Kane Lee Academy - Lê Việt Khanh - 2023
+    </div> -->
+    <script> 
+    const init = {
+        index: -1, //index of a course
+        id: 0, // index of a word
+        courses: [],
+        correctAnswers: 0,
+        incorrectAnswers: 0,
+    }; 
+    </script>
+
+
+
+
+    <!-- add more data here -->
+    <script src="./public/data/080923.js"></script>
+
+    <!-- end add data -->
+
+
+
+
+
+    <!-- components -->
+    <script src="./public/js/components/main.js"></script>
+    <script src="./public/js/components/lesson.js"></script>
+    <script src="./public/js/components/vocab.js"></script>
+    <script src="./public/js/components/test.js"></script>
+    <script src="./public/js/components/result.js"></script>
+    
+    <!-- end components -->
+    <script>
+        const $ = document.querySelector.bind(document);
+        const $$ = document.querySelectorAll.bind(document);
+        MainActivity().run();
+        function intent(nextActivity) {
+            nextActivity().run();
+        }
+    </script>
+</body>
+</html>
