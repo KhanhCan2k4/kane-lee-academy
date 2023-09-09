@@ -38,6 +38,7 @@ function LessonActivity() {
         //click button take a quiz to start the test
         startTest() {
             $("#btn-test").onclick = () => {
+                init.id = 0;
                 $("#btn-test").style.display = 'none';
                 intent(TestActivity);
             }
